@@ -1,0 +1,8 @@
+%h2 Lightspeed #{params[:machine]} #{@name}
+/-@servers.each do |server|
+-@name = "tree"
+%p 
+  #{params[:machine]}
+  -@users.each do |user|
+    %a(href="/confirm/#{user}/#{params[:machine]}")
+      = user

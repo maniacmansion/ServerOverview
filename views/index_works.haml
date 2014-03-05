@@ -1,0 +1,13 @@
+-@servers.each do |server|
+  %p 
+    /#{server} -> #{@name} -> #{flash[:timef]}
+    #{server} -> #{flash[:namef]} -> #{flash[:timef]}
+  %a(href="/jump/#{server}") 
+    = "Jump on/ Leave" 
+  %br
+  %br
+
+  /-@users.each do |user|
+  /  %a(href="#{server}?#{user}")
+  /    = user
+  
