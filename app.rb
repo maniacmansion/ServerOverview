@@ -36,15 +36,23 @@ end
 
 
 get '/' do
- haml :index
+  @servers = Server.all
+  haml :index
 end
-#post '/' do
-#  @time 
-#end
+
 
 get '/jump/:machine' do
+  #if params[:machine] == Server.all(title)
+  # Fehlerresistenz: :machine included in Server.all(title)
   haml :jump
 end
+
+post '/jump/:machine' do
+  #if params[:machine] == Server.all(title)
+  # Fehlerresistenz: :machine included in Server.all(title)
+  haml :jump
+end
+
 
 get '/confirm/:user/:machine' do
   @nameN = params[:user]
@@ -65,14 +73,14 @@ post '/time/:machineN/:user' do
   ## p.save
   p = Server.find_by(title: "#{params[:machineN]}")
   p.update(body: "#{params[:user]}")
-  redirect '/overview'
+  redirect '/'
 end
 
 
 
-#get '/*' do
-#  redirect '/'	
-#end
+get '/*' do
+  redirect '/'	
+end
 
 get '/test' do
   haml :test

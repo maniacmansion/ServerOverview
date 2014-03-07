@@ -1,6 +1,4 @@
 %p #{@nameN} is using #{@machineN} since #{@servertime}!
-/%a(href="/overview/#{@machineN}/#{@nameN}/#{@servertime}")
-/  ="overview"
 %br
 %form{ :action=> "/time/#{@machineN}/#{@nameN}", :method=> "POST"}
-  %input{:type=> "submit", :value=> "Overview", :title=> "What time is it?"} 
+  %input{:type=> "submit", :value=> "Overview", :title=> "Get back to the Overview page"} 
