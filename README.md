@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Server Overview
 ===========
 
@@ -6,13 +5,15 @@ Server Overview
 Screenshot
 ----------
 
+![Screenshot](Server Overview_screen.png)
+
 
 License
 -------
 
 (The GPL)
 
-Copyright (c) 2013 Viktor Rzesanke
+Copyright (c) 2014 Viktor Rzesanke
 
 Server Overview is copyrighted free software by Viktor Rzesanke.
 You can redistribute it and/or modify it under either the terms of the GPL
@@ -34,6 +35,5 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ServerOverview
 ==============
 
-help to see which server is available or used and if so who is using it
->>>>>>> 1c023d5e885160c6889a50416c0720390e241689
+Help to see which Server is currently available/free or used and if so who is using it
 
