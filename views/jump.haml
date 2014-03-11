@@ -1,8 +1,10 @@
 %h2 Lightspeed #{params[:machine]}
-/-@servers.each do |server|
--@name = "tree"
 %p 
-  #{params[:machine]}
+  //#{params[:machine]}
   -@users.each do |user|
-    %a(href="/confirm/#{user}/#{params[:machine]}")
-      = user
+    //#{user.name}
+    //%a(href="/confirm/#{user.name}/#{params[:machine]}")
+    //  = user
+    %br
+    %form{ :action=> "/confirm/#{user.name}/#{params[:machine]}", :method=> "GET"} 
+      %input{ :title=> "Jump on the Server", :type=> "submit", :value=> "#{user.name}"}

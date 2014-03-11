@@ -2,13 +2,17 @@
   %p
     #{server.title} -> #{server.body}
     %br
-    %a(href="/jump/#{server.title}") 
-      = "Jump on/ Leave"
+    //%a(href="/jump/#{server.title}") 
+    //  = "Jump on/ Leave"
     %form{ :action=> "/jump/#{server.title}", :method=> "POST"} 
       %input{ :title=> "Jump on or Leave the #{server.title} Server", :type=> "submit", :value=> "Jump/Leave",} 
     %br
     %br
-
+%p
+  %form{ :action=> "/edit_server", :method=> "GET"} 
+    %input{ :title=> "Edit Server", :type=> "submit", :value=> "Edit Server"}
+  %form{ :action=> "/edit_user", :method=> "GET"} 
+    %input{ :title=> "Edit User", :type=> "submit", :value=> "Edit User"}
 //-@rechners.each do |rechner|
 //  %p
 //    #{rechner} -> #{@name} ->

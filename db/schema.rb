@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305072415) do
+ActiveRecord::Schema.define(version: 20140311223045) do
 
   create_table "servers", force: true do |t|
     t.string  "title"
     t.text    "body"
     t.time    "time"
     t.integer "server_id"
+  end
+
+  create_table "users", force: true do |t|
+    t.string  "name"
+    t.integer "user_id"
   end
 
 end
