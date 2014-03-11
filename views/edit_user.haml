@@ -1,0 +1,16 @@
+- @users.each do |user|
+  %p
+    #{user.name} -> Change User Name
+    %form{ :action=> "/edit/#{user.name}", :method=> "GET"} 
+      %input{ :title=> "Edit User Name", :type=> "text", :value=> "#{user.name}"}
+    %form{ :action=> "/remove/#{user.name}", :method=> "GET"} 
+      %input{ :title=> "Delete User", :type=> "submit", :value=> "Remove"}
+%p
+  Add a New User:
+  %input{ :title=> "Add new User", :type=> "text", :value=> ""}
+  
+  %br
+  %br
+
+  %form{ :action=> "/", :method=> "GET"} 
+    %input{ :title=> "Submit User Changes", :type=> "submit", :value=> "Submit"}

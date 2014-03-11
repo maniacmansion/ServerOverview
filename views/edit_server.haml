@@ -1,0 +1,16 @@
+- @servers.each do |server|
+  %p
+    #{server.title} -> Change Server Name
+    %form{ :action=> "/edit/#{server.title}", :method=> "GET"} 
+      %input{ :title=> "Edit Server Name", :type=> "text", :value=> "#{server.title}"}
+    %form{ :action=> "/remove/#{server.title}", :method=> "GET"} 
+      %input{ :title=> "Delete Server", :type=> "submit", :value=> "Remove"}
+%p
+  Add a New Server:
+  %input{ :title=> "Add new Server", :type=> "text", :value=> ""}
+  
+  %br
+  %br
+
+  %form{ :action=> "/", :method=> "GET"} 
+    %input{ :title=> "Submit Server changes", :type=> "submit", :value=> "Submit"}
